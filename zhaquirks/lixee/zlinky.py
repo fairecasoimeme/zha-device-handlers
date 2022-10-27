@@ -82,7 +82,8 @@ class ZLinkyTICManufacturerCluster(CustomCluster, ManufacturerSpecificCluster):
         0x0210: ("std_injected_active_load_curve_point_n", t.uint16_t, True),
         # Standard mode: CCAIN-1 "Point n-1 de la courbe de charge active injectée" (Production) / Uint16 5 car
         0x0211: ("std_injected_active_load_curve_point_n_1", t.uint16_t, True),
-        # Standard mode: SMAXN-1 "Puissance app. max. soutirée n-1" (Monophasé) / Uint16 5 car
+        # Standard mode: SMAXN-1 "Puissance app. max. soutirée n-1" (Triphasé / Monophasé) (From V10)/ Uint16 5 car
+        0x0400: ("std_apparent_power_withdrawn_max_phase_n_1", t.uint16_t, True),
         # Standard mode: SMAXN1-1 "Puissance app. max. soutirée n-1 ph.1" (Triphasé) / Uint16 5 car
         0x0212: ("std_apparent_power_withdrawn_max_phase_1_n_1", t.uint16_t, True),
         # Standard mode: SMAXN2-1 "Puissance app. max. soutirée n-1 ph. 2" (Triphasé) / Uint16 5 car
