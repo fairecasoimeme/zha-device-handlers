@@ -227,13 +227,12 @@ class ZLinkyTICFWV14(ZLinkyTICFWV12):
 
     replacement[ENDPOINTS][1][INPUT_CLUSTERS].insert(1, Time.cluster_id)
 
+
 class ZLinkyTICFWV15(ZLinkyTICFWV14):
     """ZLinky_TIC from LiXee with firmware v15.0"""
 
     signature = deepcopy(ZLinkyTICFWV14.signature)
     replacement = deepcopy(ZLinkyTICFWV14.replacement)
 
-    signature[ENDPOINTS][1][DEVICE_TYPE]= zha.DeviceType.DIMMABLE_LIGHT
-    replacement[ENDPOINTS][1][DEVICE_TYPE]= zha.DeviceType.DIMMABLE_LIGHT
-    
-
+    signature[ENDPOINTS][1][DEVICE_TYPE] = zha.DeviceType.DIMMABLE_LIGHT
+    replacement[ENDPOINTS][1][DEVICE_TYPE] = zha.DeviceType.DIMMABLE_LIGHT
